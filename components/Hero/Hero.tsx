@@ -9,11 +9,11 @@ const Hero = () => {
             <p className="text-[#c7417b] dark:text-[#c7417b]">Hello, I'm</p>
           </div>
 
-          <h1 className="font-semibold leading-10 tracking-tight text-5xl text-black dark:text-[#fce7f3]">
+          <h1 className="font-semibold leading-10 tracking-tight text-6xl text-black dark:text-[#fce7f3]">
             Elvira Vargas Bermudez
           </h1>
 
-          <h2 className="text-[#7a5e73] text-2xl font-bold">
+          <h2 className="text-[#7a5e73] text-4xl font-bold">
             Full Stack developer
           </h2>
 
