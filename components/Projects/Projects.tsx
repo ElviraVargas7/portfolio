@@ -4,7 +4,10 @@ import { projects } from "@/data/projects/projectsDetails";
 const Projects = () => {
   return (
     <div className="w-full">
-      <h2 className="font-semibold text-5xl mb-4 text-center w-full">
+      <h2
+        id="projects"
+        className="font-semibold text-5xl mb-4 text-center w-full"
+      >
         Projects
       </h2>
 

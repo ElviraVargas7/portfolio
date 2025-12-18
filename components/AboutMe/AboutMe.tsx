@@ -3,7 +3,7 @@ import HighlightCard from "../common/HighlightCard/HighlightCard";
 const AboutMe = () => {
   return (
     <div className="w-full">
-      <h2 className="font-semibold text-5xl mb-4 text-center w-full">
+      <h2 id="about" className="font-semibold text-5xl mb-4 text-center w-full">
         About Me
       </h2>
 

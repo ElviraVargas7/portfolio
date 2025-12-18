@@ -3,7 +3,10 @@ import InfoCard from "../common/InfoCard/InfoCard";
 const SkillsTechStack = () => {
   return (
     <div className="w-full">
-      <h2 className="font-semibold text-5xl mb-4 text-center w-full">
+      <h2
+        id="skills"
+        className="font-semibold text-5xl mb-4 text-center w-full"
+      >
         Skills / Tech Stack
       </h2>
 
