@@ -9,7 +9,7 @@ const Hero = () => {
             <p className="text-[#c7417b] dark:text-[#c7417b]">Hello, I'm</p>
           </div>
 
-          <h1 className="font-semibold leading-10 tracking-tight text-6xl text-black dark:text-[#fce7f3] mb-1">
+          <h1 className="font-semibold leading-tight tracking-normal text-6xl text-black dark:text-[#fce7f3] mb-2">
             Elvira Vargas Bermudez
           </h1>
 
@@ -67,10 +67,10 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-11 animate-bounce">
         <Image
           src="/icons/arrow-sm-down.svg"
-          alt="LinkedIn icon"
+          alt="Arrow icon"
           width={50}
           height={10}
           priority
