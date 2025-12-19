@@ -120,7 +120,7 @@ export const projects: ProjectProps[] = [
     ],
     architecture_design_decisions: [
       "RESTful API design for inventory and sales operations",
-      "Backend-driven business logic to enforce inventory rules",
+      "Backend driven business logic to enforce inventory rules",
       "Database transactions to guarantee consistency",
       "Modular separation between inventory, sales, and reporting services",
     ],
