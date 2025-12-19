@@ -6,7 +6,7 @@ const SkillsTechStack = () => {
     <div className="w-full">
       <h2
         id="skills"
-        className="font-semibold text-5xl mb-4 text-center w-full"
+        className="font-semibold text-5xl mb-4 text-center w-full scroll-mt-24"
       >
         Skills / Tech Stack
       </h2>
