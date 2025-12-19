@@ -15,7 +15,7 @@ const Contact = () => {
         <hr className="border-2 border-solid border-[#c7417b] rounded-3xl w-20" />
       </div>
 
-      <p className="text-lg text-center w-full text-[#7a5e73] mb-12">
+      <p className="text-lg text-center w-full text-[#7a5e73] dark:text-[#FFB8DB] mb-12">
         If you’d like to discuss a project, collaboration, or role, feel free to
         reach out. You can also view my complete CV with detailed experience,
         skills, and downloadable PDF.

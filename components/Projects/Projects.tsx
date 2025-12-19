@@ -31,7 +31,7 @@ const Projects = () => {
         <hr className="border-2 border-solid border-[#c7417b] rounded-3xl w-20" />
       </div>
 
-      <p className="text-lg text-center w-full text-[#7a5e73] mb-12">
+      <p className="text-lg text-center w-full text-[#7a5e73] dark:text-[#FFB8DB] mb-12">
         A selection of projects that showcase my skills and passion for
         development
       </p>

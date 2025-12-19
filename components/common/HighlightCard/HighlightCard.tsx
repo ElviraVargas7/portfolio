@@ -18,7 +18,9 @@ const HighlightCard = ({
       </div>
       <div className="col-span-5">
         <h3 className="text-lg font-bold mb-2">{title}</h3>
-        <p className="text-[#7a5e73] text-md">{description}</p>
+        <p className="text-[#7a5e73] dark:text-[#FFB8DB] text-md">
+          {description}
+        </p>
       </div>
     </div>
   );

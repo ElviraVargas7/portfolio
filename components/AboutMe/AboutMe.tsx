@@ -13,14 +13,14 @@ const AboutMe = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
-          <p className="text-lg text-center w-full text-[#523e4d] mb-6">
+          <p className="text-lg text-center w-full text-[#523e4d] dark:text-[#FFB8DB] mb-6">
             I am a full stack software engineer with a strong focus on backend
             development, API design, and real time systems. I have experience
             building production ready platforms that integrate messaging
             services, AI powered agents, and business critical workflows,
             working across Node.js, FastAPI, .NET, and PostgreSQL.
           </p>
-          <p className="text-lg text-center w-full text-[#523e4d] mb-6">
+          <p className="text-lg text-center w-full text-[#523e4d] dark:text-[#FFB8DB] mb-6">
             My professional background includes developing AI driven backends
             connected to WhatsApp and Telegram, designing systems that process
             real time messages, files, and structured data at scale. I have
@@ -29,7 +29,7 @@ const AboutMe = () => {
             summarization, and controlled AI behavior to ensure reliable and
             verifiable responses.
           </p>
-          <p className="text-lg text-center w-full text-[#523e4d] mb-6">
+          <p className="text-lg text-center w-full text-[#523e4d] dark:text-[#FFB8DB] mb-6">
             I am comfortable working across the stack when needed, building
             clean and accessible user interfaces with React and Next.js, and
             integrating them with robust backend services. I value clean
@@ -37,7 +37,7 @@ const AboutMe = () => {
             business logic to ensure systems are maintainable, scalable, and
             easy to reason about.
           </p>
-          <p className="text-lg text-center w-full text-[#523e4d] mb-6">
+          <p className="text-lg text-center w-full text-[#523e4d] dark:text-[#FFB8DB] mb-6">
             I bring a problem solving mindset and strong engineering discipline,
             with hands on experience in cloud environments, containerized
             deployments, and CI/CD workflows. My goal is to build software that
