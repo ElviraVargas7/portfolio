@@ -1,7 +1,23 @@
+"use client";
+
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { projects } from "@/data/projects/projectsDetails";
+import ProjectDetail from "../ProjectDetail/ProjectDetail";
+import { useState } from "react";
+import BasicModal from "../common/BasicModal/BasicModal";
+import { ProjectProps } from "@/interfaces/ProjectProps";
 
 const Projects = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(
+    null
+  );
+
+  const openDetailsModal = (project: ProjectProps) => {
+    setSelectedProject(project);
+    setIsOpenModal(true);
+  };
+
   return (
     <div className="w-full">
       <h2
@@ -22,9 +38,17 @@ const Projects = () => {
 
       <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard
+            key={project.id}
+            project={project}
+            openDetailsModal={openDetailsModal}
+          />
         ))}
       </div>
+
+      <BasicModal open={isOpenModal} setOpen={setIsOpenModal}>
+        <ProjectDetail selectedProject={selectedProject} />
+      </BasicModal>
     </div>
   );
 };

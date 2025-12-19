@@ -1,8 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import TechChip from "../common/TechChip/TechChip";
 import { ProjectProps } from "@/interfaces/ProjectProps";
 
-const ProjectCard = ({ project }: { project: ProjectProps }) => {
+const ProjectCard = ({
+  project,
+  openDetailsModal,
+}: {
+  project: ProjectProps;
+  openDetailsModal: (project: ProjectProps) => void;
+}) => {
   return (
     <div className="w-full bg-white dark:bg-[#5a2236] p-4 rounded-xl flex flex-col gap-4">
       <div className="w-full h-48 relative overflow-hidden rounded-xl mb-5">
@@ -15,8 +23,8 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
         />
       </div>
 
-      <div className="min-h-80 flex flex-col justify-between gap-1">
-        <div className="flex flex-col align-bottom gap-4">
+      <div className="flex flex-1 flex-col justify-between gap-1">
+        <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">{project.title}</h3>
 
           <p className="text-[#7a5e73]">{project.summary}</p>
@@ -31,6 +39,20 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
           </div>
 
           <div className="grid grid-cols-2 gap-2">
+            <button
+              onClick={() => openDetailsModal(project)}
+              className="col-span-2 flex flex-row gap-2 bg-[#c7417b] text-white px-2 py-2 rounded-lg text-sm font-semibold justify-center"
+            >
+              <Image
+                src="/icons/view-pink.svg"
+                alt="View icon"
+                width={20}
+                height={5}
+                loading="lazy"
+              />
+              View Details
+            </button>
+
             <button className="flex flex-row gap-2 border border-solid border-[#c7417b] text-[#c7417b] px-2 py-2 rounded-lg text-sm font-semibold justify-center">
               <Image
                 src="/icons/github-pink.svg"
