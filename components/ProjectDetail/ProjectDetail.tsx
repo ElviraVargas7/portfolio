@@ -22,17 +22,17 @@ const ProjectDetail = ({
         />
       </div>
 
-      <div className="flex flex-col gap-6 bg-[#fce7f3] p-8 rounded-lg rounded-t-none text-[#7a5e73]">
-        <h2 className="font-bold text-black text-2xl">
+      <div className="flex flex-col gap-6 bg-[#fce7f3] dark:bg-[#1A000D] p-8 rounded-lg rounded-t-none text-[#7a5e73]">
+        <h2 className="font-bold text-black dark:text-white text-2xl">
           {selectedProject?.title}
         </h2>
 
         <div>
-          <p>{selectedProject?.summary}</p>
+          <p className="dark:text-[#FFB8DB]">{selectedProject?.summary}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 rounded-lg text-[#7a5e73] gap-4">
-          <div className="flex flex-col gap-4 bg-white p-4 rounded-lg shadow-md">
+          <div className="flex flex-col gap-4 bg-white dark:bg-[#400827] p-4 rounded-lg shadow-md">
             <div className="flex flex-row gap-3">
               <Image
                 src="/icons/problem-red.svg"
@@ -41,12 +41,15 @@ const ProjectDetail = ({
                 height={5}
                 loading="lazy"
               />
-              <h3 className="font-bold text-black">Problem</h3>
+              <h3 className="font-bold text-black dark:text-white">Problem</h3>
             </div>
-            <p className="text-sm"> {selectedProject?.problem}</p>
+            <p className="text-sm dark:text-[#FFB8DB]">
+              {" "}
+              {selectedProject?.problem}
+            </p>
           </div>
 
-          <div className="flex flex-col gap-3 bg-white p-4 rounded-lg shadow-md">
+          <div className="flex flex-col gap-3 bg-white dark:bg-[#400827] p-4 rounded-lg shadow-md">
             <div className="flex flex-row gap-3">
               <Image
                 src="/icons/check-circle-pink.svg"
@@ -55,9 +58,11 @@ const ProjectDetail = ({
                 height={5}
                 loading="lazy"
               />
-              <h3 className="font-bold text-black">Goal</h3>
+              <h3 className="font-bold text-black dark:text-white">Goal</h3>
             </div>
-            <p className="text-sm">{selectedProject?.goal}</p>
+            <p className="text-sm dark:text-[#FFB8DB]">
+              {selectedProject?.goal}
+            </p>
           </div>
         </div>
 
@@ -83,7 +88,7 @@ const ProjectDetail = ({
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold text-black">Target Users</h3>
+          <h3 className="font-bold text-black dark:text-white">Target Users</h3>
           <div className="flex flex-row gap-2 w-fit flex-wrap">
             {selectedProject?.target_users &&
               Object.values(selectedProject.target_users).map((item) => (
@@ -93,28 +98,36 @@ const ProjectDetail = ({
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold text-black">System Overview</h3>
+          <h3 className="font-bold text-black dark:text-white">
+            System Overview
+          </h3>
           <div className="border-solid border-l-2 border-[#c7417b] pl-4">
-            <p>{selectedProject?.system_overview}</p>
+            <p className="dark:text-[#FFB8DB]">
+              {selectedProject?.system_overview}
+            </p>
           </div>
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold text-black">Core Features</h3>
+          <h3 className="font-bold text-black dark:text-white">
+            Core Features
+          </h3>
           {selectedProject?.core_features.map((feature, index) => (
             <DetailItem key={index} description={feature} dotColor="#c7417b" />
           ))}
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold text-black">Technical Challenges</h3>
+          <h3 className="font-bold text-black dark:text-white">
+            Technical Challenges
+          </h3>
           {selectedProject?.technical_challenges.map((feature, index) => (
             <DetailItem key={index} description={feature} dotColor="#ff8605" />
           ))}
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold text-black">
+          <h3 className="font-bold text-black dark:text-white">
             Architecture & Design Decisions
           </h3>
           {selectedProject?.architecture_design_decisions.map(
@@ -129,13 +142,15 @@ const ProjectDetail = ({
         </div>
 
         <div className="flex flex-col gap-4">
-          <h3 className="font-bold text-black">Screenshots/Diagrams</h3>
+          <h3 className="font-bold text-black dark:text-white">
+            Screenshots/Diagrams
+          </h3>
           {selectedProject?.screenshots_diagrams.map((feature, index) => (
             <DetailItem key={index} description={feature} dotColor="#ff2056" />
           ))}
         </div>
 
-        <div className="flex flex-col gap-4 bg-[#F5D6E1] p-4 rounded-lg border border-solid border-[#ecb0ca]">
+        <div className="flex flex-col gap-4 bg-[#F5D6E1] dark:bg-[#400827] p-4 rounded-lg border border-solid border-[#ecb0ca]">
           <div className="flex flex-row gap-3">
             <Image
               src="/icons/check-circle-pink.svg"
@@ -144,9 +159,9 @@ const ProjectDetail = ({
               height={5}
               loading="lazy"
             />
-            <h3 className="font-bold text-black">Outcome</h3>
+            <h3 className="font-bold text-black dark:text-white">Outcome</h3>
           </div>
-          <p>{selectedProject?.outcome}</p>
+          <p className="dark:text-[#FFB8DB]">{selectedProject?.outcome}</p>
         </div>
 
         <div className="grid grid-cols-2 gap-2">

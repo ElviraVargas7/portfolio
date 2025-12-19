@@ -12,7 +12,7 @@ const ProjectCard = ({
   openDetailsModal: (project: ProjectProps) => void;
 }) => {
   return (
-    <div className="w-full bg-white dark:bg-[#5a2236] p-4 rounded-xl flex flex-col gap-4">
+    <div className="w-full bg-white dark:bg-[#400827] p-4 rounded-xl flex flex-col gap-4">
       <div className="w-full h-48 relative overflow-hidden rounded-xl mb-5">
         <Image
           src="/whatsapp-delete.jpeg"
@@ -27,7 +27,9 @@ const ProjectCard = ({
         <div className="flex flex-col gap-4">
           <h3 className="text-xl font-semibold">{project.title}</h3>
 
-          <p className="text-[#7a5e73]">{project.summary}</p>
+          <p className="text-[#7a5e73] dark:text-[#FFB8DB]">
+            {project.summary}
+          </p>
         </div>
 
         <div className="flex flex-col gap-4">

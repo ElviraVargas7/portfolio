@@ -5,8 +5,8 @@ const Hero = () => {
     <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-6 text-center sm:items-start sm:text-left">
         <div className="flex flex-col col-span-2 gap-4">
-          <div className="border border-solid border-[#c7417b] rounded-3xl bg-[#F5D6E1] dark:bg-[#E31C8D] w-fit px-4 py-2 mb-2">
-            <p id="home" className="text-[#c7417b] dark:text-[#c7417b]">
+          <div className="border border-solid border-[#c7417b] rounded-3xl bg-[#F5D6E1] dark:bg-[#FF8AC4] dark:border-[#75003B] w-fit px-4 py-2 mb-2">
+            <p id="home" className="text-[#c7417b] dark:text-[#75003B]">
               Hello, I'm
             </p>
           </div>
@@ -15,16 +15,16 @@ const Hero = () => {
             Elvira Vargas Bermudez
           </h1>
 
-          <h2 className="text-[#7a5e73] text-4xl font-bold">
+          <h2 className="text-[#7a5e73] dark:text-[#FFB8DB] text-4xl font-bold">
             Full Stack developer
           </h2>
 
-          <p className="text-[#7a5e73]">
+          <p className="text-[#7a5e73] dark:text-[#FFB8DB]">
             I design and build scalable APIs, real time systems, and AI agents
             that solve real business problems
           </p>
 
-          <h2 className="text-[#7a5e73]">
+          <h2 className="text-[#7a5e73] dark:text-[#FFB8DB]">
             <strong>Tech highlights</strong>: Node.js • React • Python • FastAPI
             • .NET • LangChain • PostgreSQL
           </h2>
