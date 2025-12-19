@@ -50,7 +50,7 @@ const Contact = () => {
           iconAlt={"Remote Icon"}
         />
 
-        <div className="flex justify-center col-span-2 mt-4">
+        <div className="flex justify-center col-span-1 md:col-span-2 mt-4">
           <button className="flex w-full justify-center items-center gap-2 bg-[#c7417b] text-white font-bold py-3 px-6 rounded-lg hover:bg-[#a53060] transition duration-300">
             <Image
               src="/icons/external-link-white.svg"
