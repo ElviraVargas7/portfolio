@@ -22,7 +22,7 @@ const Projects = () => {
     <div className="w-full">
       <h2
         id="projects"
-        className="font-semibold text-5xl mb-4 text-center w-full"
+        className="font-semibold text-5xl mb-4 text-center w-full scroll-mt-24"
       >
         Projects
       </h2>
