@@ -31,13 +31,13 @@ const NavBar = () => {
           </button>
 
           <div className="hidden md:flex items-center gap-6 text-gray-800 dark:text-gray-200 font-medium">
-            <NavLinks />
+            <NavLinks closeMenu={() => setIsMenuOpen(false)} />
           </div>
         </div>
 
         {isMenuOpen && (
           <div className="md:hidden flex flex-col gap-2 pb-6 text-center backdrop-blur-md text-gray-800 dark:text-gray-200 font-medium shadow-xl">
-            <NavLinks mobile />
+            <NavLinks mobile closeMenu={() => setIsMenuOpen(false)} />
           </div>
         )}
       </div>
