@@ -1,36 +1,45 @@
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+import NavLinks from "../NavLinks/NavLinks";
+
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="relative">
       <div className="fixed top-0 right-0 left-0 z-50">
-        <div className="grid grid-cols-1 md:grid-cols-3 backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-gray-200 dark:border-[#490829] px-16 py-2">
-          <p className="col-span-1 text-[#c7417b] dark:text-[#c7417b] font-bold text-4xl">
-            EVB
-          </p>
+        <div className="flex flex-row justify-between backdrop-blur-md bg-white/75 dark:bg-black/75 border-b border-gray-200 dark:border-[#490829] px-16 py-2">
+          <section>
+            <p className="text-[#c7417b] dark:text-[#c7417b] font-bold text-4xl">
+              EVB
+            </p>
+          </section>
 
-          <div className="col-span-2 flex flex-row gap-3 justify-evenly items-center text-gray-800 dark:text-gray-200 font-medium">
-            <a href="#home" className="dark:text-[#FFB8DB]">
-              Home
-            </a>
-            <a href="#about" className="dark:text-[#FFB8DB]">
-              About
-            </a>
-            <a href="#skills" className="dark:text-[#FFB8DB]">
-              Skills
-            </a>
-            <a href="#projects" className="dark:text-[#FFB8DB]">
-              Projects
-            </a>
-            <a href="#contact" className="dark:text-[#FFB8DB]">
-              Contact
-            </a>
-            <a
-              href="#"
-              className="bg-[#c7417b] text-white px-4 py-2 rounded-md"
-            >
-              Resume
-            </a>
+          <button
+            className="md:hidden flex justify-end"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <Image
+              src="/icons/menu-pink.svg"
+              alt="Menu Icon"
+              width={35}
+              height={35}
+              priority
+            />
+          </button>
+
+          <div className="hidden md:flex items-center gap-6 text-gray-800 dark:text-gray-200 font-medium">
+            <NavLinks />
           </div>
         </div>
+
+        {isMenuOpen && (
+          <div className="md:hidden flex flex-col gap-2 pb-6 text-center backdrop-blur-md text-gray-800 dark:text-gray-200 font-medium shadow-xl">
+            <NavLinks mobile />
+          </div>
+        )}
       </div>
     </nav>
   );
