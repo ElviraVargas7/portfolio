@@ -36,7 +36,7 @@ const NavBar = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden flex flex-col gap-2 pb-6 text-center backdrop-blur-md text-gray-800 dark:text-gray-200 font-medium shadow-xl">
+          <div className="md:hidden flex flex-col gap-2 text-center backdrop-blur-md text-gray-800 dark:text-gray-200 font-medium shadow-xl">
             <NavLinks mobile closeMenu={() => setIsMenuOpen(false)} />
           </div>
         )}
